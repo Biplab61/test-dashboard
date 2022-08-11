@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/SenFlex_Logo.png" type="image">
+    <title>DASHBOARD || SENFLEX</title>
+</head>
+
+<body>
+    <div class="container">
+
+      <!-- ----------- Navigation ------------ -->
+
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"></span>
+                        <span class="title">SENFLEX</span>
+                    </a>
+                </li>
+                <li  class="hovered">
+                    <a href="#" onclick="show('dashboard');">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="show('machine1');">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="title">Machine 1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="show('machine2');">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="title">Machine 2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="show('machine3');">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="title">Machine 3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="show('machine4');">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="title">Machine 4</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="show('machine5');">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="title">Machine 5</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ---------- Main --------------- -->
+        <div class="main">
+            <!-- ---------- TopBar ------------ -->
+            <div class="top-bar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <!-- ------------ Search ------- -->
+                <div class="search-box">
+                    <label>
+                        <input type="text" placeholder="Search Here...">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <!-- ------------ Brand Image --------- -->
+                <div class="brand">
+                    <img src="images/SenFlex_Logo.png" alt="">
+                </div>
+            </div>
+
+            <!-- Dashboard -->
+            <div class="card-box" id="dashboard">
+                <div class="card safe">
+                    <div>
+                        <div class="card-value">Safe</div>
+                        <div class="card-name">Machine 1</div>
+                    </div>
+                </div>
+                <div class="card unsafe">
+                    <div>
+                        <div class="card-value">Unsafe</div>
+                        <div class="card-name">Machine 2</div>
+                    </div>
+                </div>
+                <div class="card denger">
+                    <div>
+                        <div class="card-value">Denger</div>
+                        <div class="card-name"> Machine 3</div>
+                    </div>
+                </div>
+                <div class="card unsafe">
+                    <div>
+                        <div class="card-value">Unsafe</div>
+                        <div class="card-name">Machine 4</div>
+                    </div>
+                </div>
+                <div class="card denger">
+                    <div>
+                        <div class="card-value">Denger</div>
+                        <div class="card-name">Machine 5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Machine 1 Data -->
+            <div class="card-box" id="machine1" style="display: none;">
+                <div class="card">
+                    <div>
+                        <div class="card-value">91</div>
+                        <div class="card-name">Oxygen</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="card-value">100/60</div>
+                        <div class="card-name">Blood Pressure</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="card-value">77 /min</div>
+                        <div class="card-name"> Heart Rate</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="card-value">Good</div>
+                        <div class="card-name">Patient Condition</div>
+                    </div>
+                </div>
+            </div>
+            <!-- --------- Machine1 data end -------- -->
+                        <!-- Machine 2 Data -->
+                        <div class="card-box" id="machine2" style="display: none;">
+                            <div class="card">
+                                <div>
+                                    <div class="card-value">77</div>
+                                    <div class="card-name">Oxygen</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div>
+                                    <div class="card-value">112/70</div>
+                                    <div class="card-name">Blood Pressure</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div>
+                                    <div class="card-value">59 /min</div>
+                                    <div class="card-name"> Heart Rate</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div>
+                                    <div class="card-value">bad</div>
+                                    <div class="card-name">Patient Condition</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- --------- Machine 2 data end -------- -->
+                                    <!-- Machine 3 Data -->
+            <div class="card-box" id="machine3" style="display: none;">
+                <div class="card">
+                    <div>
+                        <div class="card-value">85</div>
+                        <div class="card-name">Oxygen</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="card-value">110/62</div>
+                        <div class="card-name">Blood Pressure</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="card-value">92 /min</div>
+                        <div class="card-name"> Heart Rate</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="card-value">Good</div>
+                        <div class="card-name">Patient Condition</div>
+                    </div>
+                </div>
+            </div>
+            <!-- --------- Machine 3 data end -------- -->
+                        <!-- Machine 4 Data -->
+                        <div class="card-box" id="machine4" style="display: none;">
+                            <div class="card">
+                                <div>
+                                    <div class="card-value">45</div>
+                                    <div class="card-name">Oxygen</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div>
+                                    <div class="card-value">67/98</div>
+                                    <div class="card-name">Blood Pressure</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div>
+                                    <div class="card-value">43 /min</div>
+                                    <div class="card-name"> Heart Rate</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div>
+                                    <div class="card-value">Denger</div>
+                                    <div class="card-name">Patient Condition</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- --------- Machine 4 data end -------- -->
+                                    <!-- Machine 5 Data -->
+            <div class="card-box" id="machine5" style="display: none;">
+                <div class="card">
+                    <div>
+                        <div class="card-value">71</div>
+                        <div class="card-name">Oxygen</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="card-value">90/69</div>
+                        <div class="card-name">Blood Pressure</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="card-value">85 /min</div>
+                        <div class="card-name"> Heart Rate</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="card-value">Bad</div>
+                        <div class="card-name">Patient Condition</div>
+                    </div>
+                </div>
+            </div>
+            <!-- --------- Machine 5 data end -------- -->
+        </div>
+
+    </div>
+
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
