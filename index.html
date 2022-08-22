@@ -5,266 +5,223 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <!-- BootStrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Link CSS Page and Logo -->
     <link rel="shortcut icon" href="images/SenFlex_Logo.png" type="image">
-    <title>DASHBOARD || SENFLEX</title>
+    <title>LOGIN || SENFLEX</title>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    background-color: #fafafa;
+}
+
+.login-div {
+    width: 500px;
+    max-height: 650px;
+    padding: 50px 35px 35px 35px;
+    border-radius: 40px;
+    box-shadow:  5px 5px 30px #bdbdbd,-5px -5px 30px #ffffff;
+    border: 8px solid #f4f5f8;
+    scroll-behavior: smooth;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 7px;
+    letter-spacing: 3px;
+}
+
+.fields {
+    width: 100%;
+    padding: 75px 5px 5px 5px;
+}
+
+.fields input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    padding: 20px 10px 20px 5px;
+}
+
+.username,
+.password {
+    margin-bottom: 26px;
+    border-radius: 25px;
+    box-shadow: inset 5px 5px 5px #cbced1, inset -5px -5px 5px #fff;
+}
+
+
+
+.fields form img {
+    height: 22px;
+    margin: 0 10px -3px 25px;
+}
+
+.form-check {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.form-check a{
+    float: right;
+    text-decoration: none;
+    color: #328df5;
+    margin-bottom: 10px;
+}
+
+ .check-input {
+    width: 16px;
+    height: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.check-lable {
+    margin-left: 15px;
+}
+
+.singin-button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    text-align: center;
+    background-image: linear-gradient(to left bottom, #328df5, #328df5, #328df5, #328df5, #39c5ec);
+    box-shadow:  3px 3px 15px #bdbdbd,-3px -3px 15px #ffffff;
+    border: 2px solid #f4f5f8;
+    transition: all .6s;
+    margin-bottom: 25px;
+}
+.singin-button:hover{
+    box-shadow: inset 2px 2px 10px #bdbdbd, inset -2px -2px 10px #ffffff;
+    background-image: linear-gradient(to right bottom, #328df5, #328df5, #328df5, #00b8dd, #00b6e9);
+}
+
+.link {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.link a {
+    text-decoration: none;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+@media(max-width:500px) {
+    .login-div {
+        width: 370px;
+        max-height: 650px;
+        padding: 60px 35px 35px 35px;
+    }
+}
+
+@media(max-width:388px) {
+    .login-div {
+        max-width: 350px;
+        min-width: 310px;
+    }
+
+    .fields form img {
+        display: none;
+    }
+
+    .fields input {
+        text-align: center;
+    }
+
+    .fields {
+        padding-top: 40px;
+    }
+}
+    </style>
+
 </head>
 
 <body>
-    <div class="container">
-
-      <!-- ----------- Navigation ------------ -->
-
-        <div class="navigation">
-            <ul>
-                <li>
-                    <a href="#">
-                        <span class="icon"></span>
-                        <span class="title">SENFLEX</span>
-                    </a>
-                </li>
-                <li  class="hovered">
-                    <a href="#" onclick="show('dashboard');">
-                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                        <span class="title">Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" onclick="show('machine1');">
-                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                        <span class="title">Machine 1</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" onclick="show('machine2');">
-                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                        <span class="title">Machine 2</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" onclick="show('machine3');">
-                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                        <span class="title">Machine 3</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" onclick="show('machine4');">
-                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                        <span class="title">Machine 4</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" onclick="show('machine5');">
-                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                        <span class="title">Machine 5</span>
-                    </a>
-                </li>
-            </ul>
+    <div class="login-div">
+        <div class="title">Welcome Back <br> Doctor</div>
+        <div class="sub-title">Login into your Dashboard!</div>
+        <div class="fields">
+            <!-- Form Start -->
+            <form method="post" action="">
+                <div class="username">
+                    <img
+                        src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-user-interface-kiranshastry-lineal-kiranshastry.png" />
+                    <input type="username" class="user-input" autocomplete="none" name="Username" id="Username"
+                        placeholder="Enter Your Username">
+                </div>
+                
+                <div class="password">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/password.png" />
+                    <input type="password" class="pass-input" autocomplete="none" name="Userpass" id="Userpass"
+                        placeholder="Enter Your Password">
+                </div>
+                <div class="form-check"><a href="#">Forget Password ?</a> <br><br>
+                    <input type="checkbox" class="check-input" id="superAdmin">
+                    <label class="check-lable" for="superAdmin">Remember Me</label>
+                </div>
+                <button class="singin-button" name="log" value="Login" onclick="myPage();" type="button">Login</button>
+            </form>
+            <!-- Form End -->
         </div>
-
-        <!-- ---------- Main --------------- -->
-        <div class="main">
-            <!-- ---------- TopBar ------------ -->
-            <div class="top-bar">
-                <div class="toggle">
-                    <ion-icon name="menu-outline"></ion-icon>
-                </div>
-                <!-- ------------ Search ------- -->
-                <div class="search-box">
-                    <label>
-                        <input type="text" placeholder="Search Here...">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
-                </div>
-                <!-- ------------ Brand Image --------- -->
-                <div class="brand">
-                    <img src="images/SenFlex_Logo.png" alt="">
-                </div>
-            </div>
-
-            <!-- Dashboard -->
-            <div class="card-box" id="dashboard">
-                <div class="card safe">
-                    <div>
-                        <div class="card-value">Safe</div>
-                        <div class="card-name">Machine 1</div>
-                    </div>
-                </div>
-                <div class="card unsafe">
-                    <div>
-                        <div class="card-value">Unsafe</div>
-                        <div class="card-name">Machine 2</div>
-                    </div>
-                </div>
-                <div class="card denger">
-                    <div>
-                        <div class="card-value">Denger</div>
-                        <div class="card-name"> Machine 3</div>
-                    </div>
-                </div>
-                <div class="card unsafe">
-                    <div>
-                        <div class="card-value">Unsafe</div>
-                        <div class="card-name">Machine 4</div>
-                    </div>
-                </div>
-                <div class="card denger">
-                    <div>
-                        <div class="card-value">Denger</div>
-                        <div class="card-name">Machine 5</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Machine 1 Data -->
-            <div class="card-box" id="machine1" style="display: none;">
-                <div class="card">
-                    <div>
-                        <div class="card-value">91</div>
-                        <div class="card-name">Oxygen</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-value">100/60</div>
-                        <div class="card-name">Blood Pressure</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-value">77 /min</div>
-                        <div class="card-name"> Heart Rate</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-value">Good</div>
-                        <div class="card-name">Patient Condition</div>
-                    </div>
-                </div>
-            </div>
-            <!-- --------- Machine1 data end -------- -->
-                        <!-- Machine 2 Data -->
-                        <div class="card-box" id="machine2" style="display: none;">
-                            <div class="card">
-                                <div>
-                                    <div class="card-value">77</div>
-                                    <div class="card-name">Oxygen</div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div>
-                                    <div class="card-value">112/70</div>
-                                    <div class="card-name">Blood Pressure</div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div>
-                                    <div class="card-value">59 /min</div>
-                                    <div class="card-name"> Heart Rate</div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div>
-                                    <div class="card-value">bad</div>
-                                    <div class="card-name">Patient Condition</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- --------- Machine 2 data end -------- -->
-                                    <!-- Machine 3 Data -->
-            <div class="card-box" id="machine3" style="display: none;">
-                <div class="card">
-                    <div>
-                        <div class="card-value">85</div>
-                        <div class="card-name">Oxygen</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-value">110/62</div>
-                        <div class="card-name">Blood Pressure</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-value">92 /min</div>
-                        <div class="card-name"> Heart Rate</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-value">Good</div>
-                        <div class="card-name">Patient Condition</div>
-                    </div>
-                </div>
-            </div>
-            <!-- --------- Machine 3 data end -------- -->
-                        <!-- Machine 4 Data -->
-                        <div class="card-box" id="machine4" style="display: none;">
-                            <div class="card">
-                                <div>
-                                    <div class="card-value">45</div>
-                                    <div class="card-name">Oxygen</div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div>
-                                    <div class="card-value">67/98</div>
-                                    <div class="card-name">Blood Pressure</div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div>
-                                    <div class="card-value">43 /min</div>
-                                    <div class="card-name"> Heart Rate</div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div>
-                                    <div class="card-value">Denger</div>
-                                    <div class="card-name">Patient Condition</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- --------- Machine 4 data end -------- -->
-                                    <!-- Machine 5 Data -->
-            <div class="card-box" id="machine5" style="display: none;">
-                <div class="card">
-                    <div>
-                        <div class="card-value">71</div>
-                        <div class="card-name">Oxygen</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-value">90/69</div>
-                        <div class="card-name">Blood Pressure</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-value">85 /min</div>
-                        <div class="card-name"> Heart Rate</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card-value">Bad</div>
-                        <div class="card-name">Patient Condition</div>
-                    </div>
-                </div>
-            </div>
-            <!-- --------- Machine 5 data end -------- -->
-        </div>
-
     </div>
 
 
-    
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="script.js"></script>
+    <!-- BootStrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+        <script>
+            function myPage(){
+           var un =document.getElementById("Username").value;
+           var pw =document.getElementById("Userpass").value;
+           setTimeout(function(){
+               if(un == "senflex" && pw == "senflex@12"){
+                location.replace("jndex.html")
+           }
+           else{
+               alert("Invalid UserName and Password........!   Please try Again........");
+           }
+           }, 1200);
+        }
+
+        </script>
 </body>
 
 </html>
